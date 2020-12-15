@@ -2,10 +2,10 @@
   <div id="app">
     <div class="header">
 
-      <h1>Banco UN</h1>
+      <h1>Dinerall</h1>
       <nav>
-        <button v-on:click="init" v-if="is_auth" > Inicio </button>
-        <button v-on:click="getBalance" v-if="is_auth" > Saldo </button>
+        <button v-on:click="init" v-if="is_auth" > LogIn </button>
+        <button v-on:click="getBalance" v-if="is_auth" > SignUp </button>
         <button v-if="is_auth" > Transacción </button>
         <button v-if="is_auth" >Cerrar Sesión</button>
       </nav>
@@ -14,7 +14,7 @@
       <router-view></router-view>
     </div>
     <div class="footer">
-      <h2>Misión TIC 2022</h2>
+      <h2>Dinerall</h2>
     </div>
   </div>
 </template>

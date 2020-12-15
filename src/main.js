@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import vueRouter from 'vue-router'
 import router from './router'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '@/assets/css/main.css'
 
 Vue.use(vueRouter)
 
@@ -15,3 +17,10 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+
+
+
+
+
+
