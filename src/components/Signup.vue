@@ -82,7 +82,7 @@
                                 (result) => {
                                     const newUser = result.data
                                     this.response = "Bienvenido a Dinerall, " + newUser.name
-                                    alert("Bienvenido a Dinerall, " + newUser.name);
+                                    alert("Bienvenid@ a Dinerall, " + newUser.name + ". Por favor inicia sesión.");
                                     this.$router.replace('/login');                                                      
                                 },
                                 (error) => {
