@@ -75,7 +75,7 @@
         methods: {
             create_user(){
                     axios({ method: "POST", 
-                            "url": "http://127.0.0.1:8000/user/signup/", 
+                            "url": "https://dinerall.herokuapp.com/user/signup/", 
                             "data": this.user, 
                             "headers": { "content-type": "application/json"}
                             }).then(   

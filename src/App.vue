@@ -3,7 +3,7 @@
     <!-- Navigation -->
     <nav class="navbar shadow bg-white rounded justify-content-between flex-nowrap flex-row fixed-top" v-if="authenticated">
       <div class="container">
-        <a class="navbar-brand float-left" href="https://www.positronx.io" target="_blank">
+        <a class="navbar-brand float-left" href="https://dinerall-app.herokuapp.com/" target="_blank">
            <!-- Logo Image -->
            <img src="./assets/logo_horizontal_negro.png" width="180" alt="Dinerall" class="d-inline-block align-middle mr-2">
         </a>

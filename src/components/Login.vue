@@ -53,7 +53,7 @@
             auth_user(){
                 if(this.user.mail != "" && this.user.password != ""){
                     axios({ method: "POST", 
-                            "url": "http://127.0.0.1:8000/user/auth/", 
+                            "url": "https://dinerall.herokuapp.com/user/auth/", 
                             "data": this.user, 
                             "headers": { "content-type": "application/json"}
                             }).then(   
