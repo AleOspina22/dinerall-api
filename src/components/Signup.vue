@@ -1,6 +1,6 @@
 <template>
     <div class="vue-template">
-
+        <div class="inner-block">
         <div class="text-center">
             <img src="../assets/logo_vertical_negro.png" class="img-fluid" width="250" alt="Dinerall">
         </div>
@@ -51,6 +51,7 @@
             </div>
 
         </form>
+        </div>
     </div>
 </template>
 
@@ -75,7 +76,7 @@
         methods: {
             create_user(){
                     axios({ method: "POST", 
-                            "url": "https://dinerall.herokuapp.com/user/signup/", 
+                            "url": "https://dinerall.herokuapp.com/signup/", 
                             "data": this.user, 
                             "headers": { "content-type": "application/json"}
                             }).then(   
@@ -83,13 +84,13 @@
                                     const newUser = result.data
                                     this.response = "Bienvenido a Dinerall, " + newUser.name
                                     alert("Bienvenid@ a Dinerall, " + newUser.name + ". Por favor inicia sesión.");
-                                    this.$router.replace('/login');                                                      
-                                },
-                                (error) => {
-                                    this.response = "El correo electrónico ya está registrado."
-                                    console.error(error);
+                                    this.$router.replace({name: 'login'});                                                      
                                 }
-                            )
+                            ).catch(
+                                (error) => { 
+                                    console.error(error)   
+                                }
+                            )                            
 
 
             }

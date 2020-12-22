@@ -1,5 +1,6 @@
 <template>
     <div class="vue-template">
+        <div class="inner-block">
         
         <div class="text-center">
             <img src="../assets/logo_vertical_negro.png" class="img-fluid" width="250" alt="Dinerall">
@@ -30,7 +31,7 @@
             <p> {{ response }} </p>
 
         </form>
-
+        </div>
     </div>
 </template>
 
@@ -53,23 +54,28 @@
             auth_user(){
                 if(this.user.mail != "" && this.user.password != ""){
                     axios({ method: "POST", 
-                            "url": "https://dinerall.herokuapp.com/user/auth/", 
+                            "url": "https://dinerall.herokuapp.com/login/", 
                             "data": this.user, 
                             "headers": { "content-type": "application/json"}
                             }).then(   
                                 (result) => {                                    
                                     if (result.data == true) {
                                         this.response = "¡Hola de nuevo!";
-                                        alert('¡Hola de nuevo!');
+                                        //alert('¡Hola de nuevo!');
                                         this.$emit("authenticated", true);
-                                        this.$router.replace('/secure');
+                                        //this.$emit("current_user", this.user.mail);
+                                        const mail = this.user.mail
+                                        this.$router.push({ name:'balance', params:{ mail: mail } });
+
+                                        //this.$router.push(mail + "/balance");
                                     } else {
                                         this.response = "Correo o contraseña incorrecta"
                                     }                               
-                                }, 
+                                }               
+                            ).catch(
                                 (error) => { 
-                                    console.error(error) 
-                                }                
+                                    console.error(error)   
+                                }
                             )
                 } else {
                     this.response = "Debe ingresar un correo y una contraseña."
@@ -81,3 +87,4 @@
         }
     }
 </script>
+
