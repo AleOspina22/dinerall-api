@@ -5,7 +5,7 @@ import vueRouter from 'vue-router'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import ForgotPassword from './components/ForgotPassword'
-import Secure from './views/Secure'
+import Balance from './views/Balance'
 
 vue.use(vueRouter)
 
@@ -33,9 +33,9 @@ const routes = [
     component: ForgotPassword
   },
   {
-    path: '/secure',
-    name: 'secure',
-    component: Secure
+    path: '/:mail/balance',
+    name: 'balance',
+    component: Balance
   }
 ]
 

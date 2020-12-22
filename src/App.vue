@@ -19,15 +19,11 @@
     <!-- Main -->
     <div class="App">
       <div class="vertical-center">
-        <div class="inner-block">
           <router-view @authenticated="setAuthenticated"/>
-        </div>
       </div>
     </div>
   </div>
 </template>
-
-
 
 <script>
     export default {

@@ -1,5 +1,7 @@
 <template>
+
     <div class="vue-template">
+        <div class="inner-block">
         <form>
             <h3>Olvidé mi contraseña</h3>
 
@@ -11,6 +13,7 @@
             <button type="submit" class="btn btn-dark btn-lg btn-block">Recuperar contraseña</button>
 
         </form>
+        </div>
     </div>
 </template>
 
